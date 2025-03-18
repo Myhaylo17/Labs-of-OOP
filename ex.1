@@ -1,0 +1,55 @@
+class Live:
+    def __init__(self, name):
+        self.name = name
+
+    def run(self):
+        print(f"{self.name} is running")
+
+    def sleep(self):
+        print(f"{self.name} is sleeping")
+
+    def eat(self):
+        print(f"{self.name} is eating")
+
+    def tired(self):
+        print(f"{self.name} is tired")
+
+
+class Person(Live):
+    def speak(self):
+        print(f"{self.name} is speaking")
+
+    def pet(self, another):
+        print(f"{self.name} pets {another.name}")
+
+
+class Animal(Live):
+    def make_sound(self):
+        print(f"{self.name} is making a sound")
+
+    def scared(self, other):
+        print(f"{self.name} scared {other.name} by sound")
+
+
+
+
+
+John = Person("John")
+Elephant = Animal("Elephant")
+
+John.pet(Elephant)
+Elephant.scared(John)
+
+'''John.run()
+John.sleep()
+John.eat()
+John.tired()
+John.speak()
+
+print()
+
+Elephant.run()
+Elephant.sleep()
+Elephant.eat()
+Elephant.tired()
+Elephant.make_sound()'''
